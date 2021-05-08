@@ -39,5 +39,5 @@ endDate = endDate.strftime("%Y-%m-%d")
 startDate = startDate.strftime("%Y-%m-%d")
 
 for tckr in portfolio:
-    hist = yf.Ticker(tckr).history(period='6mo')
+    hist = yf.Ticker(tckr).history(period='2y')
     hist.to_csv("{}.csv".format(tckr), encoding='utf-8')
